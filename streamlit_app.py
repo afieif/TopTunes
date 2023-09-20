@@ -52,7 +52,7 @@ elif page == "Artist Stats":
     selected_artist = st.selectbox('Choose an Artist:', df['artist'].unique())
 
     artist_stats = df[df['artist'] == selected_artist]
-    num_songs = len(artist_stats)
+    num_songs = len(artist_stats['song'].unique())
     total_weeks_on_board = artist_stats['weeks-on-board'].sum()
 
     st.write(f"**Artist:** {selected_artist}")
