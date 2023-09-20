@@ -53,11 +53,11 @@ elif page == "Artist Stats":
 
     artist_stats = df[df['artist'] == selected_artist]
     num_songs = len(artist_stats['song'].unique())
-    total_weeks_on_board = artist_stats['weeks-on-board'].sum()
+    total_weeks_on_board = [artist_stats['song'].unique()]['weeks-on-board'].sum()
 
     st.write(f"**Artist:** {selected_artist}")
     st.write(f"**Number of Songs:** {num_songs}")
-    st.write(f"**Total Weeks on Billboard:** {total_weeks_on_board}")
+    # st.write(f"**Total Weeks on Billboard:** {total_weeks_on_board}")
 
 elif page == "Compare Artists":
     # Streamlit app for the Compare Artists page
